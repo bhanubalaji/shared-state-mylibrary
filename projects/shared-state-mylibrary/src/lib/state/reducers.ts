@@ -7,12 +7,18 @@ export interface State {
 }
 
 export const initialState: State = {
-  someState: ''
+  someState: 'test'
 };
 
 const _appReducer = createReducer(
   initialState,
-  on(updateSomeState, (state, { newValue }) => ({ ...state, someState: newValue }))
+  on(updateSomeState, (state, { newValue }) => {
+    // Log the newValue for debugging purposes
+    console.log('State updated with newValue:', newValue);
+    
+    // Return the updated state with the new value
+    return { ...state, someState: newValue };
+  })
 );
 
 export function appReducer(state: State | undefined, action: any) {

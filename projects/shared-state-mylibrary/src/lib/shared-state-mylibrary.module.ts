@@ -7,8 +7,9 @@ import { AppEffects } from './state/effects';
 
 @NgModule({
   imports: [
-    StoreModule.forRoot({ app: appReducer }),
-    EffectsModule.forRoot([AppEffects])
+    StoreModule.forFeature('someFeature', appReducer),
+    // Register effects for the feature state
+    EffectsModule.forFeature([AppEffects])
   ],
   exports: [
     StoreModule,
