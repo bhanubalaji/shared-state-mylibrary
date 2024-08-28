@@ -25,3 +25,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+npm i shared-state-mylibrary@0.0.10 
+npm config set registry https://registry.npmjs.org/
+npm publish --access=public
+npm install @ngrx/store@16 @ngrx/effects@16 
+ ng update @angular/core@16.2.12  @angular/cli@16.2.12
+  use in dist//shared-state-mylibrary   location npm  publish   
+  cd dist/shared-state-mylibrary   
+  npm whoami     
+  ng generate library shared-state-mylibrary    
+   ng new my-workspace --create-application=false    
+   ng build shared-state  
+   npm logout 
+   > npm login  > npm login
+> npm config get registry 
